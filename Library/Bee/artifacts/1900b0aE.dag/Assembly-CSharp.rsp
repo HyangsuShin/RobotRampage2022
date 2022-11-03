@@ -354,8 +354,12 @@
 "Assets/SampleScenes/Scripts/ParticleSceneControls.cs"
 "Assets/SampleScenes/Scripts/PlaceTargetWithMouse.cs"
 "Assets/SampleScenes/Scripts/SlowMoButton.cs"
+"Assets/Scripts/AssaultRifle.cs"
 "Assets/Scripts/Constants.cs"
+"Assets/Scripts/Gun.cs"
 "Assets/Scripts/GunEquipper.cs"
+"Assets/Scripts/Pistol.cs"
+"Assets/Scripts/Shotgun.cs"
 -langversion:9.0
 
 /deterministic
