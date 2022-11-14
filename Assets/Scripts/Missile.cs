@@ -23,4 +23,14 @@ public class Missile : MonoBehaviour
         yield return new WaitForSeconds(10);
         Destroy(gameObject);
     }
+
+    void OnCollisionEnter(Collision collider)
+    {
+        if (collider.gameObject.GetComponent<Player>() != null
+        && collider.gameObject.tag == "Player")
+        {
+            collider.gameObject.GetComponent<Player>().TakeDamage(damage);
+        }
+        Destroy(gameObject);
+    }
 }
