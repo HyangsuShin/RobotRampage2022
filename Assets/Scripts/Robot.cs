@@ -24,6 +24,13 @@ public class Robot : MonoBehaviour
     [SerializeField]
     GameObject missileprefab;
 
+    [SerializeField]
+    private AudioClip deathSound;
+    [SerializeField]
+    private AudioClip fireSound;
+    [SerializeField]
+    private AudioClip weakHitSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -57,6 +64,7 @@ public class Robot : MonoBehaviour
         missile.transform.position = missileFireSpot.transform.position;
         missile.transform.rotation = missileFireSpot.transform.rotation;
         robot.Play("Fire"); //Fire animation when the robot fires a missile
+        GetComponent<AudioSource>().PlayOneShot(fireSound);
     }
 
     // 1
@@ -67,11 +75,17 @@ public class Robot : MonoBehaviour
             return;
         }
         health -= amount;
+
         if (health <= 0)
         {
             isDead = true;
             robot.Play("Die");
             StartCoroutine("DestroyRobot");
+            GetComponent<AudioSource>().PlayOneShot(deathSound);
+        }
+        else
+        {
+            GetComponent<AudioSource>().PlayOneShot(weakHitSound);
         }
     }
     // 2
