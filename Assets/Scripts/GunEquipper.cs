@@ -14,6 +14,10 @@ public class GunEquipper : MonoBehaviour
 
     [SerializeField]
     GameUI gameUI;
+
+    [SerializeField]
+    Ammo ammo;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +35,7 @@ public class GunEquipper : MonoBehaviour
 
         weapon.SetActive(true);
         activeGun = weapon;
+        gameUI.SetAmmoText(ammo.GetAmmo(activeGun.tag));
     }
 
     

@@ -62,6 +62,7 @@ public void ConsumeAmmo(string tag)
         Debug.LogError("Unrecognized gun type passed:" + tag);
     }
     tagToAmmo[tag] --;
+        gameUI.SetAmmoText(tagToAmmo[tag]);
 }
 
 }
