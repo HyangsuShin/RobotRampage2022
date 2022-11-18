@@ -356,6 +356,7 @@
 "Assets/SampleScenes/Scripts/SlowMoButton.cs"
 "Assets/Scripts/Ammo.cs"
 "Assets/Scripts/AssaultRifle.cs"
+"Assets/Scripts/BackgroundMusic.cs"
 "Assets/Scripts/Constants.cs"
 "Assets/Scripts/Game.cs"
 "Assets/Scripts/GameUI.cs"
